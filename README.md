@@ -1,2 +1,2 @@
 # python_django
-#vietdz kâfâ
+# vaaaietdz kâfâ
