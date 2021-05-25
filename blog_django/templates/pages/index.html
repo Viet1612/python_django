@@ -1,47 +1,9 @@
-<!DOCTYPE html>
-<!-- saved from url=(0024)https://blog.minhho.xyz/ -->
-<html lang="en">
-    <script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/prompt.js"></script>
-    <script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/runScript.js">
-    </script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    {% load static %}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <link href="https://blog.minhho.xyz/static/images/favicon.png" rel="shortcut icon" type="image/png">
-
-    
-        <title>Flask Blog - Home</title>
-    
-</head>
-<body><div style="display: none;"></div>
-    <header class="site-header">
-    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <div class="container">
-        <a class="navbar-brand mr-4" href="https://blog.minhho.xyz/">Flask Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="https://blog.minhho.xyz/home">Home</a>
-            <a class="nav-item nav-link" href="https://blog.minhho.xyz/about">About</a>
-            </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-                
-                <a class="nav-item nav-link" href="https://blog.minhho.xyz/post/new">New Post</a>
-                    <a class="nav-item nav-link" href="https://blog.minhho.xyz/account">Account</a>
-                    <a class="nav-item nav-link" href="https://blog.minhho.xyz/logout">Logout</a>
-                
-            </div>
-        </div>
-        </div>
-    </nav>
-    </header>
-
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %}
+Django Blog - Home
+{% endblock %}
+{% block content %}
     <main role="main" class="container">
     <div class="row">
         <div class="col-md-8">
@@ -179,9 +141,4 @@ Thường được các hãng chế tạo với nhiều đặc tính kỹ thuậ
         </div>
     </div>
     </main>
-
-    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="{% static 'js/jquery-3.5.1.slim.min.js.download' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js.download' %}"></script>
-{% static 'css/bootstrap.min.css' %}
-</body></html>
+{% endblock %}

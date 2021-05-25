@@ -1,0 +1,73 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %}
+Django Blog - register
+{% endblock %}
+{% block content %}
+  <main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+<div class="content-section">
+    <form action="./" method="POST">
+        {% csrf_token %} 
+        {% comment %} <input id="csrf_token" name="csrf_token" type="hidden" value="IjhkMjgzNDA5NDYyMWY4NWQxYTc0N2IzNWMzZTIyZjY2MThlMzVlYWUi.YKyreg.MZzEvfL4WmIf_ZugBr4rpFe5QG0"> {% endcomment %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Today</legend>
+            <div class="form-group">
+                <label class="form-control-label" for="username">Username</label>
+                <input class="form-control form-control-lg" id="username" name="username" required="" type="text" value="">
+                <div class="invalid-feedback">
+                        <span>Field must be between 2 and 20 characters long.</span> 
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" for="email">Email</label>
+
+                
+                <input class="form-control form-control-lg" id="email" name="email" required="" type="email" value="">
+                
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" for="password">Password</label>
+                
+                <input class="form-control form-control-lg" id="password" name="password" required="" type="password" value="">
+                
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" for="confirm_password">Confirm Password</label>
+                
+                <input class="form-control form-control-lg" id="confirm_password" name="confirm_password" required="" type="password" value="">
+                
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <input class="btn btn-outline-info" id="submit" type="submit" value="Sign Up">
+        </div>
+    </form>
+</div>
+<div class="border-top pt-3">
+    <small class="text-muted">
+        Already Have An Account? <a href="https://blog.minhho.xyz/login" class="ml-2">Sign In</a>
+    </small>
+</div>
+
+        </div>
+        <div class="col-md-4">
+        <div class="content-section">
+            <h3>Our Sidebar</h3>
+            <p class="text-muted">You can put any information here you'd like.
+            </p><ul class="list-group">
+                <li class="list-group-item list-group-item-light">Latest Posts</li>
+                <li class="list-group-item list-group-item-light">Announcements</li>
+                <li class="list-group-item list-group-item-light">Calendars</li>
+                <li class="list-group-item list-group-item-light">etc</li>
+            </ul>
+            <p></p>
+        </div>
+        </div>
+    </div>
+    </main>
+
+{% endblock %}
