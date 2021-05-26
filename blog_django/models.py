@@ -4,7 +4,7 @@ from django.db import models
 class User(models.Model):
     user_name = models.CharField(max_length=100, unique=True)
     email = models.CharField(max_length=100, unique=True)
-    passw = models.CharField(max_length=100, unique=True)
+    passw = models.CharField(max_length=100)
     image = models.ImageField(upload_to='static/uploads/%Y/%m/%d/', null=True, blank=True)
     
     def __str__(self):

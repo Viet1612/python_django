@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import User
+from django.http import HttpResponseRedirect 
 # Create your views here.
 def index(request):
     return render(request, 'pages/index.html')
@@ -14,4 +15,5 @@ def register(request):
         confirm_password = request.POST["confirm_password"]
         data = User(user_name=username, email=email, passw=password)
         data.save()
+        return HttpResponseRedirect('/')
     return render(request, 'pages/register.html')
