@@ -6,7 +6,15 @@ Django Blog - Home
 {% block content %}
     <main role="main" class="container">
     <div class="row">
+
         <div class="col-md-8">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
         <article class="media content-section">
           <img src="{% static 'image/0691d9978a334b99.jpg' %}" class="rounded-circle article-img">
           <div class="media-body">
