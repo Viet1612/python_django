@@ -27,7 +27,7 @@ class RegisterForm(UserCreationForm):
             return username
         raise forms.ValidationError("Username is taken. Please choose a different one.")
     
-    def clean_email(self):
+    def clean_email(self):   
         email = (self.cleaned_data['email'])
         try:
             user_db.objects.get(email=email)
@@ -38,3 +38,7 @@ class RegisterForm(UserCreationForm):
 
     def save(self):
         user_db.objects.create(user_name=self.cleaned_data['username'], email=self.cleaned_data['email'], passw=make_password(self.cleaned_data['password2']), image='static/image/default.jpg')
+
+
+class LoginForm(UserCreationForm):
+    pass
