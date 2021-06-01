@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+app_name = "blog"
 urlpatterns = [
     # path(r'^home/$', views.index, name='home'),
     path(r'home/', views.index, name='home'),
