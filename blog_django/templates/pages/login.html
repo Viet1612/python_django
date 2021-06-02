@@ -10,13 +10,13 @@ Django Blog - Login
         
 <div class="content-section">
     <form  method="POST">
+        {% csrf_token %}
+	    {% comment %} {{ form|crispy }} {% endcomment %}
         <input id="csrf_token" name="csrf_token" type="hidden" value="IjhkMjgzNDA5NDYyMWY4NWQxYTc0N2IzNWMzZTIyZjY2MThlMzVlYWUi.YKyYDw.uLzYKJjibYixSz7CmYQ-gO-2RIY">
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Login</legend>
             <div class="form-group">
                 <label class="form-control-label" for="email">Email</label>
-
-                
                 <input class="form-control form-control-lg" id="email" name="email" required="" type="email" value="">
                 
             </div>
@@ -25,7 +25,7 @@ Django Blog - Login
                 
                 <input class="form-control form-control-lg" id="password" name="password" required="" type="password" value="">
                 
-            </div>
+            </div> 
             <div class="form-check">
                 <input class="form-check-input" id="remember" name="remember" type="checkbox" value="y">
                 <label class="form-check-label" for="remember">Remember Me</label>
